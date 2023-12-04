@@ -21,3 +21,5 @@ RUN pip3 install --no-cache --upgrade pip setuptools
 
 RUN apk add lrzip
 RUN pip3 install huggingface_hub
+RUN mkdir /tmp/hfcache
+RUN export TRANSFORMERS_CACHE=/tmp/hfcache/
