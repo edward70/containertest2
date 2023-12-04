@@ -4,6 +4,8 @@ FROM alpine:${VARIANT}
 
 ARG VARIANT
 
+LABEL dev.containers.features="common"
+
 # Temporary: Upgrade packages due to mentioned CVEs
 RUN if [[ "$VARIANT" == "3.15" ]]; then \
         apk update \
